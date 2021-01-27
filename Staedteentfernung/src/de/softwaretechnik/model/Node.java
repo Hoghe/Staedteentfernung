@@ -1,7 +1,7 @@
 package de.softwaretechnik.model;
 
-public class Node implements Comparable{
-	
+public class Node implements Comparable<Node>{
+		
 	private int _id;
 	private String _name;
 	private double _distance;
@@ -16,10 +16,6 @@ public class Node implements Comparable{
 		return _name;			
 	}
 	
-	public String getName() {
-		return _name;
-	}
-	
 	public int getId() {
 		return _id;
 	}
@@ -32,9 +28,7 @@ public class Node implements Comparable{
 		this._distance = distance;
 	}
 
-	@Override
-	public int compareTo(Object o) {
-		Node other = (Node) o;
+	public int compareTo(Node other) {
 	    return this._name.compareTo(other._name);
 	}
 	

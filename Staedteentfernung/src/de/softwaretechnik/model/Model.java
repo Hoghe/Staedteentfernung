@@ -19,8 +19,7 @@ public class Model {
     
 	public Model() {
 		_listNode = new ArrayList<Node>();
-		_listEdge = new ArrayList<Edge>();
-		
+		_listEdge = new ArrayList<Edge>();	
 	}
 	
     public void setCalculationAlgo(CalculationAlgo calculationAlgo) {
@@ -74,6 +73,4 @@ public class Model {
 			e.printStackTrace();
 		}
 	}
-	
-
 }

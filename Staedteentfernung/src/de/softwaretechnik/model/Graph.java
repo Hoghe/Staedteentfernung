@@ -9,7 +9,8 @@ public class Graph {
     private PriorityQueue<Edge>[] _adj;
 
 
-    public Graph(int vCount) {
+    @SuppressWarnings("unchecked")
+	public Graph(int vCount) {
         this._vCount = vCount;
         // initialize adj
         _adj = new PriorityQueue[vCount];

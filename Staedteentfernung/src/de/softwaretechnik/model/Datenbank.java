@@ -44,5 +44,5 @@ public final class Datenbank {
 		}
     	return _rs;
     }
-
 }
+
