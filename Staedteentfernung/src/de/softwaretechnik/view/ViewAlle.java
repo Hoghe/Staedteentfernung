@@ -19,7 +19,7 @@ public class ViewAlle extends JFrame implements Views {
 	
 	public ViewAlle() {
 		setSize(_width, _height);
-		setTitle("Softwaretechnik View-Alle Version 1.0.1");
+		setTitle("Softwaretechnik View-Alle Version 1.1.1");
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		
 		li_endPoints.setEnabled(false);

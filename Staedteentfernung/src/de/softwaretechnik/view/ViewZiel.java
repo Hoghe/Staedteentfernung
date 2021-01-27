@@ -15,7 +15,7 @@ public class ViewZiel extends JFrame implements Views {
 	
 	public ViewZiel() {
 		setSize( _width, _height );
-		setTitle( "Softwaretechnik View-Ziel Version 1.0.1" );
+		setTitle( "Softwaretechnik View-Ziel Version 1.1.1" );
 		setLayout( new java.awt.FlowLayout() );
 		setDefaultCloseOperation( DISPOSE_ON_CLOSE );
 		
