@@ -1,3 +1,4 @@
+
 package de.softwaretechnik.model;
 
 import java.util.Collections;
@@ -5,6 +6,15 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Dijkstra implements CalculationAlgo{
+	
+	/**
+	 * find the shortest Path
+	 * 
+	 * @param graph (represented as an adjunct list)
+	 * @param startVertex the id from the start
+	 * @return array with the distance from the start
+	 *         to all other node
+	 */
 	
 	public double[] calculateDistance(Graph g, int startVertex) {
 		// for storing distances after removing vertex from Queue

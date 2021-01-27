@@ -4,7 +4,7 @@
  * 
  * LV "Softwaretechnik" WiSe 2020/21
  * 
- * Staedteentfernung
+ * Program "Staedteentfernung"
  *  
  * "Berechne die kürzeste Entfernung"
  * 
