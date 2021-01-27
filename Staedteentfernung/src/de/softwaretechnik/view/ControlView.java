@@ -24,7 +24,7 @@ public class ControlView extends JFrame {
 	public ControlView() {
 	  
 		setSize(_width, _height);
-		setTitle("Softwaretechnik ControlView Version 1.0.0");
+		setTitle("Softwaretechnik ControlView Version 1.0.1");
 		setLayout(new GridLayout(8,1));
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
