@@ -1,5 +1,8 @@
 package de.softwaretechnik.model;
 
+import java.util.Iterator;
+import java.util.PriorityQueue;
+
 /**
  * The class Graph merges the edge into a graph
  * 
@@ -7,9 +10,6 @@ package de.softwaretechnik.model;
  * @version 1.0.0
  */
 
-import java.util.Iterator;
-import java.util.PriorityQueue;
- 
 public class Graph {
     private int _vCount;
     private PriorityQueue<Edge>[] _adj;
