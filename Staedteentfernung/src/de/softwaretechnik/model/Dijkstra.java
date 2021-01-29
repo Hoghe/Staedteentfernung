@@ -5,6 +5,15 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/**
+ * The class represents the Dijkstra algorithm 
+ * 
+ * @author Dirk Hoghe
+ * @version 1.0.1
+ */
+
+
+
 public class Dijkstra implements CalculationAlgo{
 	
 	/**
@@ -64,8 +73,16 @@ public class Dijkstra implements CalculationAlgo{
 	                }
 	            }
 	        }
+	        
+	        // Sorts the list of Vertex by distance
 	        Collections.sort(L);
 	    }
+	    
+        /*
+		* return the array with the distance
+	    * from the start to all other node
+        */
+	    
 	    return distances;
 	}
 	  

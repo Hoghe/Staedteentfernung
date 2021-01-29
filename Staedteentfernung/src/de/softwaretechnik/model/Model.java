@@ -5,6 +5,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * The class Model reads the from the database
+ * and creates a node list and a edge list
+ * 
+ * @author Dirk Hoghe
+ * @version 1.0.0
+ */
+
 public class Model {
 	
 	private ArrayList<Node> _listNode;

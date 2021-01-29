@@ -1,5 +1,11 @@
 package de.softwaretechnik.model;
 
+/**
+ * The class Graph merges the edge into a graph
+ * 
+ * @author Dirk Hoghe
+ * @version 1.0.0
+ */
 
 import java.util.Iterator;
 import java.util.PriorityQueue;

@@ -2,6 +2,12 @@ package de.softwaretechnik.model;
 
 import java.util.Iterator;
 
+/**
+ * The class represents the BellmanFord algorithm 
+ * 
+ * @author Dirk Hoghe
+ * @version 1.0.0
+ */
 
 public class BellmanFord implements CalculationAlgo{
 	

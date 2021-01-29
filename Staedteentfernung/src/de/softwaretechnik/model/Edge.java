@@ -1,5 +1,11 @@
 package de.softwaretechnik.model;
 
+/**
+ * The class represents Edge 
+ * 
+ * @author Dirk Hoghe
+ * @version 1.0.0
+ */
 
 public class Edge implements Comparable<Edge>{
 	private int _startPoint;

@@ -6,6 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * The class establishes a connection to the database
+ * 
+ * @author Dirk Hoghe
+ * @version 1.0.1
+ */
 
 public final class Datenbank {
 	

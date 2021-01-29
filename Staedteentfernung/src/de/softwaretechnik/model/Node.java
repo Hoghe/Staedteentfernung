@@ -1,5 +1,12 @@
 package de.softwaretechnik.model;
 
+/**
+ * The class represents Node 
+ * 
+ * @author Dirk Hoghe
+ * @version 1.0.0
+ */
+
 public class Node implements Comparable<Node>{
 		
 	private int _id;
