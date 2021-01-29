@@ -19,7 +19,7 @@ public class Dijkstra implements CalculationAlgo{
 	/**
 	 * find the shortest Path
 	 * 
-	 * @param graph (represented as an adjunct list)
+	 * @param g Graph is represented as an adjunct list
 	 * @param startVertex the id from the start
 	 * @return array with the distance from the start
 	 *         to all other node
