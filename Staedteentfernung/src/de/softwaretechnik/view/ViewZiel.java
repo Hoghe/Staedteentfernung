@@ -15,14 +15,14 @@ public class ViewZiel extends JFrame implements Views {
 	
 	public ViewZiel() {
 		setSize( _width, _height );
-		setTitle( "Softwaretechnik View-Ziel Version 1.1.1" );
+		setTitle( "Softwaretechnik View-Ziel Version 1.2.0" );
 		setLayout( new java.awt.FlowLayout() );
 		setDefaultCloseOperation( DISPOSE_ON_CLOSE );
 		
-    _panel.add( lb_distance );
-    _panel.add( tf_distance );
+		_panel.add( lb_distance );
+		_panel.add( tf_distance );
         
-    add( _panel );
+		add( _panel );
 	} // Konstruktor
 
   public void setDistance( Node endPoint, ArrayList<Node> listNodes ) {

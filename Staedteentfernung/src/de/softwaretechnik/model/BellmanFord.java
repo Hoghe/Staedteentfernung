@@ -12,6 +12,9 @@ import java.util.Iterator;
 public class BellmanFord implements CalculationAlgo{
 	
 	public double[] calculateDistance(Graph g, int startVertex) {
+		
+		System.out.println("BellmanFord");
+		
 		// for storing distances
 		double[] distances = new double[g.getvCount()];
 		// for storing predecessors

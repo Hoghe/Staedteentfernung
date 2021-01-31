@@ -26,6 +26,9 @@ public class Dijkstra implements CalculationAlgo{
 	 */
 	
 	public double[] calculateDistance(Graph g, int startVertex) {
+		
+		System.out.println("Dijkstra");
+		
 		// for storing distances after removing vertex from Queue
 		double[] distances = new double[g.getvCount()];
 		// for storing father id's after removing vertex from Queue

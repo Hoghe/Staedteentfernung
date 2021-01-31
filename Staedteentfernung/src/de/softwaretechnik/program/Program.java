@@ -28,21 +28,9 @@ public class Program {
 	       
 	       Model model = new Model();
 	       ControlView controlView = new ControlView();
-	       Controller controller = new Controller(model, controlView);
+	       new Controller(model, controlView);
 	       
-//	       model.setCalculationAlgo(new BellmanFord());
-//	       model.setCalculationAlgo(new Dijkstra());
-	       
-	       ViewZiel viewZ = new ViewZiel();	
-	       controller.addView(viewZ);
-	       viewZ.setVisible(true);
-	       
-	       ViewAlle viewA = new ViewAlle();	
-	       controller.addView(viewA);
-	       viewA.setVisible(true);
-	       
-	       controlView.setVisible(true);
-	       
+	       controlView.setVisible(true);       
 	}
 
 }

@@ -10,12 +10,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+
 
 public class Controller extends WindowAdapter implements ActionListener{
 	
 	private Model _model;
 	private ControlView _controlView;
 	private LinkedList<Views> _views;
+	private AlgoListener aL_Dijkstra = new AlgoListener(new Dijkstra());
+	private AlgoListener aL_BellmanFord = new AlgoListener(new BellmanFord());
+	private CheckBoxListener cBL_Ziel = new CheckBoxListener(new ViewZiel());
+	private CheckBoxListener cBL_Alle = new CheckBoxListener(new ViewAlle());	
 	private CloseListener aL_Close = new CloseListener();
 	
 
@@ -23,9 +30,13 @@ public class Controller extends WindowAdapter implements ActionListener{
 		this._model = model;
 		this._controlView = controlView;
 		
-		controlView.addButtonCloseListener(aL_Close);
-		controlView.addButtonCalculateListener(this);
-		controlView.setNodes(model.getNodeList());
+		_controlView.addRadioButtonDijkstraListener(aL_Dijkstra);
+		_controlView.addRadioButtonBellmanFordListener(aL_BellmanFord);
+		_controlView.addCheckBoxZielListener(cBL_Ziel);
+		_controlView.addCheckBoxAllesListener(cBL_Alle);
+		_controlView.addButtonCloseListener(aL_Close);
+		_controlView.addButtonCalculateListener(this);
+		_controlView.setNodes(model.getNodeList());
 		
 		_views = new LinkedList<Views>();
 	}
@@ -68,6 +79,41 @@ public class Controller extends WindowAdapter implements ActionListener{
         	v.setDistance(((Node)_controlView.getEndPoint()), listNodes);
         }
 	}
+	
+	public class AlgoListener implements ActionListener{
+		
+		private CalculationAlgo _calculationAlgo;
+		
+		public AlgoListener(CalculationAlgo calculationAlgo) {
+			_calculationAlgo = calculationAlgo;
+		}
+
+		public void actionPerformed(ActionEvent e) {
+			_model.setCalculationAlgo(_calculationAlgo);		
+			
+		}
+	}
+	
+	public class CheckBoxListener implements ActionListener{
+		
+		private Views _view;
+		
+		public CheckBoxListener(Views view) {
+			_view = view;
+		}
+
+	    public void actionPerformed(ActionEvent e) {
+	        JCheckBox cb = (JCheckBox) e.getSource();
+	        if (cb.isSelected()) {
+	            addView(_view);
+	            ((JFrame)_view).setVisible(true);
+	        } else {
+	            delView(_view);
+	            ((JFrame)_view).setVisible(false);
+	        }
+	    }
+	}
+
 	
 	public class CloseListener implements ActionListener{
 
