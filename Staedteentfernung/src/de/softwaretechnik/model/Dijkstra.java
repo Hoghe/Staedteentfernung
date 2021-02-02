@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * The class represents the Dijkstra algorithm 
  * 
  * @author Dirk Hoghe
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 
@@ -29,15 +29,15 @@ public class Dijkstra implements CalculationAlgo{
 		
 		System.out.println("Dijkstra");
 		
-		// for storing distances after removing vertex from Queue
+		// for storing distances after removing vertex from List
 		double[] distances = new double[g.getvCount()];
-		// for storing father id's after removing vertex from Queue
+		// for storing father id's after removing vertex from List
 		int[] predecessors = new int[g.getvCount()];
 		for (int i = 0; i < g.getvCount(); i++) {
 			predecessors[i] = -1;
 	    }
 
-	    // set up vertex queue
+	    // set up vertex List
 	    LinkedList<Vertex> L = new LinkedList<Vertex>();
 	    for (int i = 0; i < g.getvCount(); i++) {
 	    	if (i != startVertex) {
@@ -93,11 +93,6 @@ public class Dijkstra implements CalculationAlgo{
 		private int _id;
 		private double _distance;
 		private Vertex _parent;
-		   
-		public Vertex(){
-			_distance = Double.MAX_VALUE; // "infinity"
-		    _parent = null;  
-		}
 		   
 		public Vertex(int id){
 			this._id = id;

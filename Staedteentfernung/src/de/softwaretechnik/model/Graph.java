@@ -2,6 +2,7 @@ package de.softwaretechnik.model;
 
 import java.util.Iterator;
 import java.util.PriorityQueue;
+import java.util.LinkedList;
 
 /**
  * The class Graph merges the edge into a graph
@@ -12,16 +13,16 @@ import java.util.PriorityQueue;
 
 public class Graph {
     private int _vCount;
-    private PriorityQueue<Edge>[] _adj;
+    private LinkedList<Edge>[] _adj;
 
 
     @SuppressWarnings("unchecked")
 	public Graph(int vCount) {
         this._vCount = vCount;
         // initialize adj
-        _adj = new PriorityQueue[vCount];
+        _adj = new LinkedList[vCount];
         for (int i = 0; i < vCount; i++) {
-            _adj[i] = new PriorityQueue<Edge>();
+            _adj[i] = new LinkedList<Edge>();
         }
     }
     
@@ -31,10 +32,6 @@ public class Graph {
  
     public void addEdge(int i, int j, double distance) {
         _adj[i].add(new Edge(i, j, distance));
-    }
- 
-    public void addEdge(Edge e) {
-        _adj[e.getStartPoint()].add(e);
     }
  
     public void removeEdge(int i, int j) {
@@ -52,13 +49,13 @@ public class Graph {
         return _adj[e.getStartPoint()].contains(e);
     }
  
-    public PriorityQueue<Edge> neighbours(int vertex) {
+    public LinkedList<Edge> neighbours(int vertex) {   	
         return _adj[vertex];
     }
  
     public void printGraph() {
         for (int i = 0; i < _vCount; i++) {
-            PriorityQueue<Edge> edges = neighbours(i);
+            LinkedList<Edge> edges = neighbours(i);           
             Iterator<Edge> it = edges.iterator();
             System.out.print(i + ": ");
             for (int j = 0; j < edges.size(); j++) {

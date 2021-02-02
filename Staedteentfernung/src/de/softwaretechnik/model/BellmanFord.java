@@ -6,7 +6,7 @@ import java.util.Iterator;
  * The class represents the BellmanFord algorithm 
  * 
  * @author Dirk Hoghe
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 public class BellmanFord implements CalculationAlgo{
@@ -22,7 +22,7 @@ public class BellmanFord implements CalculationAlgo{
 	 
 		// initialize arrays
 		for (int i = 0; i < distances.length; i++) {
-			distances[i] = Double.MAX_VALUE;
+			distances[i] = Double.MAX_VALUE; // "infinity"
 			predecessors[i] = -1;
 	    }
 		distances[startVertex] = 0;

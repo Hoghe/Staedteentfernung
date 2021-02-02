@@ -52,6 +52,7 @@ public class Controller extends WindowAdapter implements ActionListener{
 		}
 	}
 	
+	// CalculateListener
 	public void actionPerformed(ActionEvent e) {
 
 		int startNode = ((Node)_controlView.getStartPoint()).getId();
@@ -60,7 +61,8 @@ public class Controller extends WindowAdapter implements ActionListener{
 
 		ArrayList<Edge> listEdge = _model.getEdgeList();
 		for(Edge element : listEdge){ 
-			g.addEdge(element.getStartPoint(), element.getEndPoint(), element.getDistance());;
+			g.addEdge(element.getStartPoint(), element.getEndPoint(), 
+			element.getDistance());;
 			}
 		
 		double[] distances= _model.berechneAlgo(g, startNode);
@@ -70,8 +72,7 @@ public class Controller extends WindowAdapter implements ActionListener{
 				if(element.getId() == i) {
 					element.setDistance(distances[i]);
 				}
-			}
-					
+			}			
 		}
         Iterator<Views> it = _views.iterator();
         while (it.hasNext()) {
